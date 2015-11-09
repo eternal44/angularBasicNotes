@@ -10,7 +10,6 @@
       <div ng-hide="store.product.soldOut">
         <h3>
           {{product.name }}
-          {{product.description }}
           <em class='pull-right'>{{product.price | currency }}</em>
         </h3>
         <div class="gallery" ng-show="{{ product.images.length > 1 }}">
@@ -24,6 +23,25 @@
           </ul><!-- img-thumbnails -->
         </div><!-- gallery -->
         <button ng-show="store.product.canPurchase"> Add to Cart </button>
+      </div>
+      <section>
+        <ul class="nav nav-pills">
+          <li> <a href ng-click="tab = 1">Description</a> </li>
+          <li> <a href ng-click="tab = 2">Specifications</a> </li>
+          <li> <a href ng-click="tab = 3">Review</a> </li>
+        </ul>
+      </section>
+      <div class="panel" ng-show="tab === 1">
+        <h4>Description</h4>
+        <p>{{product.description }} </p>
+      </div>
+      <div class="panel" ng-show="tab === 2">
+        <h4>Specs</h4>
+        <p>None yet</p>
+      </div>
+      <div class="panel" ng-show="tab === 3">
+        <h4>Reviews</h4>
+        <p>None yet</p>
       </div>
     </div><!-- list store products -->
   </body>
