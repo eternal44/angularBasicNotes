@@ -45,6 +45,13 @@
           <p>None yet</p>
         </div>
         <div class="panel" ng-show="panel.isSelected(3)">
+          <form name="reviewForm" ng-controller="ReviewController as reviewCtrl">
+            <blockquote>
+              <b>Stars: {{reviewCtrl.review.stars}}</b>
+              {{reviewCtrl.review.body}}
+              <cite>by: {{reviewCtrl.review.author}}</cite>
+            </blockquote>
+
           <h4>Reviews</h4>
           <!--  Product Reviews List -->
           <ul>
