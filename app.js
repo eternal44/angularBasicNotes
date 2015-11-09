@@ -8,7 +8,7 @@
   var gems = [
     {
       name: 'Dodecachedron',
-      price: 2.95,
+      price: 2.000,
       description: '...',
       canPurchase: false,
       soldOut: false
