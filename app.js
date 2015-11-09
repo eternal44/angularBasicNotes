@@ -5,6 +5,9 @@
     this.products = gems;
   });
 
+  app.controller('PanelController', function() {
+    this.tab = 1;
+  });
   var gems = [
     {
       name: 'Dodecachedron',
