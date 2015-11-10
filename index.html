@@ -49,23 +49,23 @@
           <ul>
             <h4>Reviews</h4>
             <form name="reviewForm" ng-controller="ReviewController as reviewCtrl"
-                                    ng-submit="reviewCtrl.addReview(product)" novalidate>
+                                    ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
               <blockquote>
                 <b>Stars: {{reviewCtrl.review.stars}}</b>
                 {{reviewCtrl.review.body}}
                 <cite>by: {{reviewCtrl.review.author}}</cite>
               </blockquote>
 
-              <select ng-model="reviewCtrl.review.stars">
+              <select ng-model="reviewCtrl.review.stars" required>
                 <option value="1">1 star</option>
                 <option value="2">2 star</option>
                 <option value="3">3 star</option>
                 <option value="4">4 star</option>
                 <option value="5">5 star</option>
               </select><br>
-              <textarea ng-model="reviewCtrl.review.body"></textarea><br>
+              <textarea ng-model="reviewCtrl.review.body" required></textarea><br>
               <label>by:</labe>
-                <input ng-model="reviewCtrl.review.author" type="email"/><br>
+                <input ng-model="reviewCtrl.review.author" type="email" required/><br>
                 <input type="submit" value="Submit" />
             </form>
             <li ng-repeat="review in product.reviews">
