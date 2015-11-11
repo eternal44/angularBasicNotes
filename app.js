@@ -26,6 +26,12 @@
     };
   });
 
+  app.directive('productSpecs', function() {
+    return {
+      restrict: 'A',
+      templateUrl: 'product-specs.html'
+    };
+  });
 
   app.directive('productTitle', function(){
     return {
