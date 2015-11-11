@@ -34,10 +34,8 @@
             <a href ng-click="panel.selectTab(3)">Review</a>
           </li>
         </ul>
-        <div class="panel" ng-show="panel.isSelected(1)">
-          <h4>Description</h4>
-          <p>{{product.description }} </p>
-        </div>
+        <product-description class="panel" ng-show="panel.isSelected(1)">
+        </product-description>
         <div class="panel" ng-show="panel.isSelected(2)">
           <h4>Specs</h4>
           <p>None yet</p>
